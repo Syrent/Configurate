@@ -87,7 +87,7 @@ if (project.hasProperty("spongeKeyStore")) {
 }
 
 indra {
-    github("SpongePowered", "Configurate") {
+    github("Syrent", "Configurate") {
         publishing(true) // GH Packages
         ci(true) // GH Actions
     }
