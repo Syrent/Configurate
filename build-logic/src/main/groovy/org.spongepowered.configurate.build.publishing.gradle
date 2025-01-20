@@ -87,6 +87,7 @@ if (project.hasProperty("spongeKeyStore")) {
 }
 
 indra {
+    publishAllTo("sayanrepo", "https://repo.sayandev.org/snapshots")
     github("SpongePowered", "Configurate") {
         publishing(true) // GH Packages
         ci(true) // GH Actions
