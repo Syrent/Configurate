@@ -88,22 +88,24 @@ if (project.hasProperty("spongeKeyStore")) {
 
 indra {
     publishAllTo("sayanrepo", "https://repo.sayandev.org/snapshots")
-    github("SpongePowered", "Configurate") {
+    /*github("SpongePowered", "Configurate") {
         publishing(true) // GH Packages
         ci(true) // GH Actions
-    }
+    }*/
     apache2License()
 
-    if (
+    /*if (
         project.hasProperty("spongeSnapshotRepo") &&
         project.hasProperty("spongeReleaseRepo")
     ) {
         publishSnapshotsTo("sponge", project.spongeSnapshotRepo)
         publishReleasesTo("sponge", project.spongeReleaseRepo)
-    }
+    }*/
 
     configurePublications {
         artifactId = archiveName
+        // we need to make stickynote loader cache happy
+        version = version.substring(0, version.length() - "-SNAPSHOT".length())
 
         pom {
             inceptionYear.set("2014")
