@@ -25,9 +25,9 @@ import org.spongepowered.configurate.util.EnumLookup;
 import java.lang.reflect.Type;
 import java.util.function.Predicate;
 
-final class EnumValueSerializer extends ScalarSerializer<Enum<?>> {
+class EnumValueSerializer extends ScalarSerializer<Enum<?>> {
 
-    EnumValueSerializer() {
+    public EnumValueSerializer() {
         super(new TypeToken<Enum<?>>() {});
     }
 
